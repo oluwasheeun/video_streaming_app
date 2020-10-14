@@ -17,6 +17,8 @@ const GoogleAuth = props => {
           auth.isSignedIn.listen(onAuthChange);
         });
     });
+
+    // eslint-disable-next-line 
   }, []);
 
   const onAuthChange = isSignedIn => {
