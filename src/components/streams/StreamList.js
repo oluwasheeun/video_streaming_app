@@ -4,9 +4,12 @@ import { connect } from 'react-redux';
 import { fetchStreams } from '../../actions';
 
 const StreamList = props => {
+  
   useEffect(() => {
     props.fetchStreams();
-  }, []);
+
+     // eslint-disable-next-line 
+  },[]);
 
   const renderAdmin = stream => {
     if (stream.userId === props.currentUserId) {
