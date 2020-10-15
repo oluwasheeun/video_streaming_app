@@ -4,18 +4,19 @@ import { connect } from 'react-redux';
 import { fetchStreams } from '../../actions';
 
 const StreamList = props => {
-  
   useEffect(() => {
     props.fetchStreams();
 
-     // eslint-disable-next-line 
-  },[]);
+    // eslint-disable-next-line
+  }, []);
 
   const renderAdmin = stream => {
     if (stream.userId === props.currentUserId) {
       return (
         <div className='right floated content'>
-          <button className='ui button primary'>Edit</button>
+          <Link to={`/streams/edit/${stream.id}`} className='ui button primary'>
+            Edit
+          </Link>
           <button className='ui button negative'>Delete</button>
         </div>
       );
