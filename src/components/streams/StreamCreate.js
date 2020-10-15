@@ -4,13 +4,15 @@ import { createStream } from '../../actions';
 import StreamForm from './StreamForm';
 
 const StreamCreate = props => {
-
-  const onSubmit = (formValues) => {
+  const onSubmit = formValues => {
     props.createStream(formValues);
-  }
+  };
 
   return (
-    <StreamForm onSubmitHandler={onSubmit} />
+    <div>
+      <h3>Create a Stream</h3>
+      <StreamForm onSubmitHandler={onSubmit} />
+    </div>
   );
 };
 
